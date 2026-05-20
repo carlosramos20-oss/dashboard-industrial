@@ -30,8 +30,12 @@ scope = [
     "https://www.googleapis.com/auth/drive"
 ]
 
-credenciales = ServiceAccountCredentials.from_json_keyfile_name(
-    "dashboardindustrial-496916-294b206b04f6.json",
+import streamlit as st
+
+credenciales_dict = dict(st.secrets["gcp_service_account"])
+
+credenciales = ServiceAccountCredentials.from_json_keyfile_dict(
+    credenciales_dict,
     scope
 )
 
