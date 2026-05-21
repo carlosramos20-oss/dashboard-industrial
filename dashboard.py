@@ -45,8 +45,8 @@ cliente = gspread.authorize(credenciales)
 # ABRIR GOOGLE SHEET
 # ====================================
 
-sheet = cliente.open(
-    "Produccion_Industrial"
+sheet = cliente.open_by_url(
+    "https://docs.google.com/spreadsheets/d/1DbffNb7mGmKAaVDM5r22B7jRUsQAxZeMjzq_kJ1x1Xo/edit?usp=sharing"
 ).sheet1
 
 # ====================================
